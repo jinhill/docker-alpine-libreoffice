@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER jinhill
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
-RUN apk add --no-cache \
+RUN apk update && apk add --no-cache \
     fontconfig \
     ttf-dejavu \
     font-noto \
@@ -12,7 +12,7 @@ RUN apk add --no-cache \
 RUN mkdir -p /usr/local/share/fonts
 # 创建一个目录用于挂载文件
 RUN mkdir -p /data
-RUN apk update && apk add libreoffice
+RUN apk add libreoffice
 
 EXPOSE 8000
 
