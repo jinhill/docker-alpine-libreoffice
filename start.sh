@@ -5,3 +5,4 @@ libreoffice --nologo --norestore --invisible --headless --accept='socket,host=0,
 
 # 保持容器运行，等待宿主机执行命令
 while :; do sleep 2073600; done
+# tail -f /dev/null
